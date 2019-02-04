@@ -57,7 +57,7 @@ library(phyloseq)
 (http://bioconductor.org/packages/release/data/experiment/html/curatedMetagenomicData.html)
 
 ```{r}
-if(as.numeric(version$minor) > 5) {
+if(as.numeric(version$minor) >= 5 & as.numeric(version$major >= 3)) {
   if (!requireNamespace("BiocManager", quietly = TRUE))
       install.packages("BiocManager")
   BiocManager::install("curatedMetagenomicData", version = "3.8")
