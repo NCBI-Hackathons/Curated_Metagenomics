@@ -13,10 +13,11 @@ vignette: |-
 
 #packman will check if these packages are installed and install them if not.
 if (!require("pacman")) install.packages("pacman")
-pacman::p_load(knitr, limma, dplyr, DT,tibble, tidyr, purrr, here, ggplot2, ggfortify, magritter, SummarizedExperiment, biobroom, kableExtra, corrplot, htmltools, ComplexHeatmap, gridExtra, pheatmap, formattable, GGally, stringr, curatedMetagenomicData, phyloseq)
+pacman::p_load(knitr, limma, dplyr, DT,tibble, tidyr, purrr, here, ggplot2, ggfortify, magritter, SummarizedExperiment, biobroom, kableExtra, corrplot, htmltools, ComplexHeatmap, gridExtra, pheatmap, formattable, GGally, stringr, curatedMetagenomicData, phyloseq, reticulate)
 
 
 knitr::opts_chunk$set(echo = TRUE)
+library(reticulate)
 library(knitr)
 library(limma)
 library(dplyr)
