@@ -10,6 +10,12 @@ vignette: |-
 
 
 ```{r setup, include=FALSE}
+
+#packman will check if these packages are installed and install them if not.
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load(knitr, limma, dplyr, DT,tibble, tidyr, purrr, here, ggplot2, ggfortify, magritter, SummarizedExperiment, biobroom, kableExtra, corrplot, htmltools, ComplexHeatmap, gridExtra, pheatmap, formattable, GGally, stringr, curatedMetagenomicData, phyloseq)
+
+
 knitr::opts_chunk$set(echo = TRUE)
 library(knitr)
 library(limma)
@@ -49,6 +55,14 @@ library(phyloseq)
 # Bioconductir data package:
 
 (http://bioconductor.org/packages/release/data/experiment/html/curatedMetagenomicData.html)
+
+```{r}
+if(as.numeric(version$minor) > 5) {
+  if (!requireNamespace("BiocManager", quietly = TRUE))
+      install.packages("BiocManager")
+  BiocManager::install("curatedMetagenomicData", version = "3.8")
+}
+```
 
 (http://bioconductor.org/packages/release/data/experiment/vignettes/curatedMetagenomicData/inst/doc/curatedMetagenomicData.html)
 
