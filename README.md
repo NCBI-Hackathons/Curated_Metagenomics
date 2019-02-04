@@ -3,7 +3,7 @@ Expanding the utility of curated metagenomics
 
 
 # Motivation:
-curatedMetagenomicsData is a unified, well annotated microbiome / metagenomics public data set.  
+[curatedMetagenomicsData](http://bioconductor.org/packages/release/data/experiment/html/curatedMetagenomicData.html) is a unified, well annotated microbiome / metagenomics public data set.  
 It contain 6 types of assay data for each study:  
     1. Species-level taxonomic profiles, expressed as relative abundance from kingdom to strain level  
     2. Presence of unique, clade-specific markers  
@@ -35,12 +35,17 @@ This project will attempt to suggest some utility functions to transfer curatedM
 Unlike phyloseq, we are not currently sure how taxonomy phylogeny tree can be integrated into MAE.  
 
 
+# pre-existing object oriented data structure to be used:
 
+MultiAssayExperiment
 ![MultiAssayExperiment](https://bioconductor.github.io/BiocWorkshops/Ramos_MultiAssayExperiment/MultiAssayExperiment.png)
 
+phyloseq
 ![phyloseq](https://journals.plos.org/plosone/article/figure/image?size=large&id=10.1371/journal.pone.0061217.g003)
 
 
+# reference:
+[Paper](https://www.nature.com/articles/nmeth.4468)
 
 
 # Introduction on data wrangling from curatedMetagenomicData into MAE:
