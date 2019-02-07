@@ -162,39 +162,6 @@ LomanNJ_tib$exprs_head
 ```
 
 
-## Converting classes from ExpressionSet to phyloseq
-```{r,  warning = FALSE, message = FALSE}
-
-cat("ExpressionSet")
-LomanNJ_tib$ES[[4]]
-## Creating `phyloseq` and `metagenomeSeq` objects
-LomanNJ.tree <- ExpressionSet2phyloseq( LomanNJ_tib$ES[[4]], phylogenetictree = TRUE)
-
-cat("phyloseq")
-LomanNJ.tree
-
-tree <- getMetaphlanTree()
-cat("Phylogenetic tree")
-tree
-# plot(tree)
-
-
-```
-getMetaphlanTree() function always assign a phylogenetic tree for MetaPhlAn2 bugs, that is stored at inst/extdata/metaphlan2_selected.tree.reroot.nwk.bz2 in a Newick format.  
-Same phylogenetic tree is applied by default for ALL MetaPhlAn bugs.  
-However, when the phyloseq object is constructed it get pruned to include ONLY the bugs present in a given dataset.  
-Use phyloseq::show method to check that the tree has the same number of nodes as there are bugs, and this differs from dataset to dataset. 
-
-
-
-## Check/summarize descriptive analysis of dataset characteristics    
-
-
-### Convert data structure to python's expected format   
-
-### Run integrated R/Python analysis pipeline via Rstudio's Reticulate cross-language interface    
-Reticulate <https://github.com/rstudio/reticulate>
-
 
 
 
